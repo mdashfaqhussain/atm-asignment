@@ -40,7 +40,7 @@ Develop a cash withdrawal function for an ATM. Ensure that the solution:
 
 * Code starts from the `Main` class which initializes the ATM with cash.
 * The `Main` class provides a menu for the user to withdraw cash or exit the application.
-* The withdrawal process is handled by the `CashWithdrawal` class with the desired amount as input in a single-threaded manner.
+* The withdrawal process is handled by the `ATM` class with the desired amount as input in a single-threaded manner.
 * The balance is calculated after each transaction is completed.
 
 ### Assumptions

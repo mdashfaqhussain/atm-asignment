@@ -2,11 +2,12 @@ package org.example;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.atm.ATM;
-import org.example.atm.CashWithdrawal;
+import org.example.atm.Denomination;
 import org.example.exception.AmountNegativeException;
 import org.example.exception.DenominationUnavailableException;
 import org.example.exception.InsufficientFundsException;
 
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,7 @@ public class Main {
     public static void main(String[] args) throws DenominationUnavailableException, InsufficientFundsException, AmountNegativeException {
         ATM atm = new ATM();
         Scanner scanner = new Scanner(System.in);
-
+        Map<Denomination, Integer> dispensedNotes;
         while (true) {
             log.info("1. Withdraw");
             log.info("2. Exit");
@@ -36,8 +37,8 @@ public class Main {
             switch (choice) {
                 case 1:
                     int withdrawAmount = getPositiveInput(scanner);
-                    CashWithdrawal withdrawal = new CashWithdrawal(withdrawAmount, atm.getAtmCash());
-                    withdrawal.executeWithdrawal();
+                    dispensedNotes =  atm.executeWithdrawal(withdrawAmount);
+                    printDispensedNotes(dispensedNotes);
                     break;
                 case 2:
                     System.exit(0);
@@ -52,7 +53,6 @@ public class Main {
     private static int getPositiveInput(Scanner scanner) {
         int input;
         do {
-
             while (!scanner.hasNextInt()) {
                 log.info("Please enter a valid positive integer:");
                 scanner.next();
@@ -60,6 +60,16 @@ public class Main {
             input = scanner.nextInt();
         } while (input <= 0);
         return input;
+    }
+
+    /**
+     * Prints the dispensed notes.
+     *
+     * @param dispensedNotes The dispensed notes to print.
+     */
+    private static void printDispensedNotes(Map<Denomination, Integer> dispensedNotes) {
+        dispensedNotes.forEach((denomination, count) ->
+                log.info("Dispensing " + count + " x " + denomination.getValue()));
     }
 
 }
