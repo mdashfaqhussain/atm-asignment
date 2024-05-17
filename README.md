@@ -1,47 +1,63 @@
-Atm Implementation
-Objective
-Problem Statement
-Write compiling code for "Cash Withdrawal" function, from an ATM which based on user specified amount, dispenses bank-notes.
-Ensure that the code takes care of the following:
+# ATM Cash Withdrawal System
 
-Minimum number of bank-notes are used while dispensing the amount
-Availability of various denominations in the ATM machine is maintained
-Code should be flexible to take care of any bank denomination as long as it is multiple of 10
-Code should support parallel Cash Withdrawals i.e. two or more customer's should be able to withdraw money
-Takes care of exceptional situations
-Write appropriate unit test cases too
-State any assumptions made
-Write the compiling code using choice of your IDE (Eclipse, IntelliJ)
-Provide Unit Test Cases using JUNIT (if you are not conversant with JUNIT, just list down unit test cases)
-NFRs
-Readme.md - Duration of this exercise is 90 minutes. Please manage your time accordingly, - Make any necessary assumption, and clearly state the assumptions made. - Do not seek any help online or through any other source.
+## Objective
 
-Evaluation Criteria
-Code Completeness/ Correctness
-Code Structure: Modularity, usage of 00 principles and design patterns, size of classes, and functions, n-path complexity of functions.
-Code Quality: class/function/variable naming conventions, package/class structure, log messages - please do not provide comments unless necessary
-Choice of data structures
-Efficiency of code (leverage multi-threading wherever it makes sense)
-Code test Cases and follow TDD (if know)
+To implement a "Cash Withdrawal" function for an ATM that dispenses bank-notes based on a user-specified amount. The implementation should:
 
-Solution
-Code starts from the Main class which initializes the ATM with cash.
-The Main class provides a menu for the user to withdraw cash or exit the application.
-The withdrawal process is handled by the CashWithdrawal class with the desired amount as input in a single-threaded manner.
-The balance is calculated after each transaction is completed.
+- Use the minimum number of bank-notes while dispensing the amount.
+- Maintain the availability of various denominations in the ATM machine.
+- Be flexible to handle any bank denomination as long as it is a multiple of 100.
+- Support parallel cash withdrawals, allowing two or more customers to withdraw money simultaneously.
+- Handle exceptional situations appropriately.
+- Include unit test cases.
 
-Assumptions
-Denominations in the ATM should be multiples of 100.
-There can be multiple denominations of different values and counts.
-The amount to be withdrawn should be a multiple of 100.
-Test cases for withdrawing using multiple threads are included in the test class.
+## Problem Statement
 
-Testing and Running the Application
-Tested with JDK 17 and IntelliJ IDEA.
+Develop a cash withdrawal function for an ATM. Ensure that the solution:
 
-Steps to Run the Application
-Clone the repository.
-Resolve Maven dependencies.
-Run mvn clean. If this is successful:
-Run the application with mvn exec:java and check the console for results.
-If running the application with Maven fails, directly run the Main class from your IDE.
+1. Uses the minimum number of bank-notes for dispensing the specified amount.
+2. Maintains the availability of various denominations within the ATM.
+3. Is flexible to support any denomination as long as it is a multiple of 100.
+4. Supports concurrent cash withdrawals.
+5. Handles exceptional situations effectively.
+
+## Non-Functional Requirements (NFRs)
+
+- **Readme.md**: The duration of this exercise is 90 minutes. Manage your time accordingly.
+- Clearly state any assumptions made.
+- Do not seek help online or through other sources.
+
+## Evaluation Criteria
+
+1. **Code Completeness/Correctness**: The solution should be complete and correct.
+2. **Code Structure**: Ensure modularity, use of OOP principles and design patterns, appropriate size of classes and functions, and low n-path complexity.
+3. **Code Quality**: Follow proper naming conventions, logical package/class structure, and include relevant log messages (avoid unnecessary comments).
+4. **Choice of Data Structures**: Use appropriate data structures for efficiency.
+5. **Efficiency of Code**: Leverage multi-threading where applicable.
+6. **Code Test Cases**: Follow TDD principles if possible and provide sufficient test coverage.
+
+## Solution
+
+* Code starts from the `Main` class which initializes the ATM with cash.
+* The `Main` class provides a menu for the user to withdraw cash or exit the application.
+* The withdrawal process is handled by the `CashWithdrawal` class with the desired amount as input in a single-threaded manner.
+* The balance is calculated after each transaction is completed.
+
+### Assumptions
+
+1. Denominations in the ATM should be multiples of 100.
+2. There can be multiple denominations of different values and counts.
+3. The amount to be withdrawn should be a multiple of 100.
+4. Test cases for withdrawing using multiple threads are included in the test class.
+
+## Testing and Running the Application
+
+* Tested with JDK 17 and IntelliJ IDEA.
+
+### Steps to Run the Application
+
+1. Clone the repository.
+2. Resolve Maven dependencies.
+3. Run `mvn clean`. If this is successful:
+4. Run the application with `mvn exec:java` and check the console for results.
+5. If running the application with Maven fails, directly run the `Main` class from your IDE.
