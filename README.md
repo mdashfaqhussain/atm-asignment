@@ -23,3 +23,25 @@ Code Quality: class/function/variable naming conventions, package/class structur
 Choice of data structures
 Efficiency of code (leverage multi-threading wherever it makes sense)
 Code test Cases and follow TDD (if know)
+
+Solution
+Code starts from the Main class which initializes the ATM with cash.
+The Main class provides a menu for the user to withdraw cash or exit the application.
+The withdrawal process is handled by the CashWithdrawal class with the desired amount as input in a single-threaded manner.
+The balance is calculated after each transaction is completed.
+
+Assumptions
+Denominations in the ATM should be multiples of 100.
+There can be multiple denominations of different values and counts.
+The amount to be withdrawn should be a multiple of 100.
+Test cases for withdrawing using multiple threads are included in the test class.
+
+Testing and Running the Application
+Tested with JDK 17 and IntelliJ IDEA.
+
+Steps to Run the Application
+Clone the repository.
+Resolve Maven dependencies.
+Run mvn clean. If this is successful:
+Run the application with mvn exec:java and check the console for results.
+If running the application with Maven fails, directly run the Main class from your IDE.
