@@ -45,10 +45,11 @@ Develop a cash withdrawal function for an ATM. Ensure that the solution:
 
 ### Assumptions
 
-1. Denominations in the ATM should be multiples of 100.
+1. Denominations in the ATM will be multiples of 100.
 2. There can be multiple denominations of different values and counts.
 3. The amount to be withdrawn should be a multiple of 100.
 4. Test cases for withdrawing using multiple threads are included in the test class.
+
 
 ## Testing and Running the Application
 
