@@ -52,7 +52,7 @@ Develop a cash withdrawal function for an ATM. Ensure that the solution:
 
 ## Testing and Running the Application
 
-* Tested with JDK 17 and IntelliJ IDEA.
+* Tested with JDK 21 and IntelliJ IDEA.
 
 ### Steps to Run the Application
 
