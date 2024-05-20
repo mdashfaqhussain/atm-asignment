@@ -2,8 +2,8 @@ package org.example.exception;
 
 
 /**
- * The DenominationUnavailableException class represents an exception that is thrown when the required denominations
- * for a withdrawal request are unavailable in the ATM.
+ * The AmountNegativeException class represents an exception that is thrown when a negative amount
+ * is encountered in a context where only positive values are valid.
  */
 public class AmountNegativeException extends  Exception{
     public AmountNegativeException(String message) {
