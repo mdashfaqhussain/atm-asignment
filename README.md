@@ -42,13 +42,14 @@ Develop a cash withdrawal function for an ATM. Ensure that the solution:
 * The `Main` class provides a menu for the user to withdraw cash or exit the application.
 * The withdrawal process is handled by the `ATM` class with the desired amount as input in a single-threaded manner.
 * The balance is calculated after each transaction is completed.
+* Unit test cases for withdrawing using **multiple threads** are included in the test class.
 
 ### Assumptions
 
 1. Denominations in the ATM will be multiples of 100.
 2. There can be multiple denominations of different values and counts.
 3. The amount to be withdrawn should be a multiple of 100.
-4. Test cases for withdrawing using multiple threads are included in the test class.
+
 
 
 ## Testing and Running the Application
